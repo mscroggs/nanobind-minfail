@@ -1,14 +1,9 @@
 #include <nanobind/nanobind.h>
 #include <nanobind/ndarray.h>
+#include <nanobind/stl/complex.h>
 #include <span>
 
-#include <nanobind/stl/complex.h>
-
-
-
 namespace nb = nanobind;
-
-using namespace nb::literals;
 
 namespace {
 
