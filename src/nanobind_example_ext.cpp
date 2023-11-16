@@ -2,16 +2,6 @@
 #include <nanobind/ndarray.h>
 #include <span>
 
-#include <memory>
-#include <nanobind/nanobind.h>
-#include <nanobind/ndarray.h>
-#include <nanobind/stl/pair.h>
-#include <nanobind/stl/string.h>
-#include <nanobind/stl/tuple.h>
-#include <nanobind/stl/vector.h>
-#include <span>
-#include <string>
-#include <vector>
 #include <nanobind/stl/complex.h>
 
 
