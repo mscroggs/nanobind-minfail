@@ -17,7 +17,7 @@ class FiniteElement {
     FiniteElement() {}
 
     template<typename T>
-    void swap(std::span<T> data) const {
+    void swap(std::span<T> data, std::uint32_t index) const {
         std::swap(data[0], data[1]);
     }
 
@@ -31,15 +31,15 @@ NB_MODULE(nanobind_example_ext, m) {
       .def(
           "swap",
           [](const FiniteElement& self,
-             nb::ndarray<double, nb::ndim<1>, nb::c_contig> data)
+             nb::ndarray<double, nb::ndim<1>, nb::c_contig> data, std::uint32_t index)
           {
-            self.swap(std::span(data.data(), data.size()));
+            self.swap(std::span(data.data(), data.size()), index);
           })
       .def(
           "swap",
           [](const FiniteElement& self,
-             nb::ndarray<std::complex<double>, nb::ndim<1>, nb::c_contig> data)
+             nb::ndarray<std::complex<double>, nb::ndim<1>, nb::c_contig> data, std::uint32_t index)
           {
-            self.swap(std::span(data.data(), data.size()));
+            self.swap(std::span(data.data(), data.size()), index);
           });
 }
